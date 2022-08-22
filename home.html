@@ -91,7 +91,7 @@
                     <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i
                             class="bi bi-arrow-down-circle-fill"></i>
                     </div>
-                    <h2 class="h4 fw-bolder">Lazily Singleton But Not a Thread Safe</h2>
+                    <h2 class="h4 fw-bolder">Lazily Singleton, Not a Thread Safe</h2>
                     <p>Compared to the first example, instead of generating a "new object" in the field, we will
                         initialize the field value to null.
                         <br /> <i class="bi bi-arrow-right"></i> This way, "new object" will be created only by demand.
@@ -109,8 +109,12 @@
                     <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i
                             class="bi bi-arrow-down-circle-fill"></i></div>
                     <h2 class="h4 fw-bolder">Lazily, Thread Safe But Not Efficient</h2>
-                    <p>Text will appear here Text will appear here Text will appear here Text will appear here Text will
-                        appear here Text will appear here Text will appear here Text will appear here</p>
+                    <p>In order to avoid situations when multiple threads in a single program try to access the same
+                        resource at the same time we can use synchronized static method.
+                        <br /> <i class="bi bi-arrow-right"></i> This approach isn't the best practice since the
+                        performance of the system can degrade due to the
+                        slow working of the synchronized keyword.
+                    </p>
                     <a class="text-decoration-none"
                         href="https://github.com/itsmechelly/SingletonEvolution_10TypesOf_FromEagerlyToBestPractice/tree/main/src/n03_ThreadSafeButNotEfficient"
                         target="_blank">
@@ -125,10 +129,16 @@
                 <div class="col-lg-4 mb-5 mb-lg-0">
                     <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i
                             class="bi bi-arrow-down-circle-fill"></i></div>
-                    <h2 class="h4 fw-bolder">More Efficient, BUT Not Thread Safe <i class="bi bi-arrow-right"></i> The
+                    <h2 class="h4 fw-bolder">More Efficient, BUT Not Thread Safe <i class="bi bi-arrow-right"></i>
+                        The
                         Double Lock Problem</h2>
-                    <p>Text will appear here Text will appear here Text will appear here Text will appear here Text will
-                        appear here Text will appear here Text will appear here Text will appear here</p>
+                    <p>In attempt to make the previous implementation efficient, we will add a synchronized block
+                        inside the getter method, i.e. only in the critical section - where the "new" object is
+                        created.
+                        <br /> <i class="bi bi-arrow-right"></i> Which supposedly improves the performance because the
+                        synchronization is only on the critical part, but this singleton isn't thread safe and known as
+                        <strong>The Double Lock Problem</strong>.
+                    </p>
                     <a class="text-decoration-none"
                         href="https://github.com/itsmechelly/SingletonEvolution_10TypesOf_FromEagerlyToBestPractice/tree/main/src/n04_MoreEfficient_ButNotThreadSafe_TheDoubleLockProblem"
                         target="_blank">
@@ -141,8 +151,12 @@
                             class="bi bi-arrow-down-circle-fill"></i>
                     </div>
                     <h2 class="h4 fw-bolder">Lazily Thread Safe With Double Lock Solve</h2>
-                    <p>Text will appear here Text will appear here Text will appear here Text will appear here Text will
-                        appear here Text will appear here Text will appear here Text will appear here</p>
+                    <p>To solve the double lock problem we encountered in the previous implementation, and to ensure our
+                        singleton is a thread safe, we will perform another check to make sure the instance is null -
+                        inside the block we created.
+                        <br /> <i class="bi bi-arrow-right"></i> This way we will get a singleton which is both, more
+                        efficient and a thread safe.
+                    </p>
                     <a class="text-decoration-none"
                         href="https://github.com/itsmechelly/SingletonEvolution_10TypesOf_FromEagerlyToBestPractice/tree/main/src/n05_ThreadSafeWithDoubleLockSolve"
                         target="_blank">

@@ -46,10 +46,13 @@
                         <h1 class="display-4 fw-bolder text-white mb-2">Singleton Evolution</h1>
                         <h3 class="display-9 fw-bolder text-white mb-2">10 Ways to Implement <br /> Singleton Pattern
                         </h3>
-                        <p class="lead fw-normal text-white-50 mb-4"><small>Although he is one of the most controversial Design Patterns, I found it REALLY FUN to explore this issue what lead me to apply 10 different ways to implement this pattern.
-                            The inspiration and all the credit for the code goes to my lecturer Kobi Shasha.
-                            Let's Begin!
-                        </small></p>
+                        <p class="lead fw-normal text-white-50 mb-4"><small>
+                                Although he is one of the most controversial Design Patterns, I found it REALLY FUN to
+                                explore this issue what lead me to apply 10 different ways to implement this pattern.
+                                Credit for the code goes to my lecturer Kobi Shasha, from whom I draw a lot of
+                                inspiration.
+                                Let's Begin!
+                            </small></p>
                         <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
                             <a class="btn btn-primary btn-lg px-4 me-sm-3" href="#implementations">Get Started</a>
                             <a class="btn btn-outline-light btn-lg px-4"
@@ -69,9 +72,14 @@
                 <div class="col-lg-4 mb-5 mb-lg-0">
                     <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i
                             class="bi bi-arrow-down-circle-fill"></i></div>
-                    <h2 class="h4 fw-bolder">Eagerly Singleton</h2>
-                    <p>Text will appear here Text will appear here Text will appear here Text will appear here Text will
-                        appear here Text will appear here Text will appear here Text will appear here</p>
+                    <h2 class="h4 fw-bolder">Simple Eagerly Singleton</h2>
+                    <p>The fact that the field is "static" and initialized as a "new object" means that he will be
+                        loaded in the very first steps of the program loading - what makes him eagerly.
+                        <br /> <i class="bi bi-arrow-right"></i> Constructor must be private.
+                        <br /> <i class="bi bi-arrow-right"></i> Getter must be public because that's the only way to
+                        get the instance outside of that particular
+                        class.
+                    </p>
                     <a class="text-decoration-none"
                         href="https://github.com/itsmechelly/SingletonEvolution_10TypesOf_FromEagerlyToBestPractice/tree/main/src/n01_EagerlySingleton"
                         target="_blank">
@@ -83,10 +91,16 @@
                     <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i
                             class="bi bi-arrow-down-circle-fill"></i>
                     </div>
-                    <h2 class="h4 fw-bolder">Lazily Singleton</h2>
-                    <p>Text will appear here Text will appear here Text will appear here Text will appear here Text will
-                        appear here Text will appear here Text will appear here Text will appear here</p>
-                    <a class="text-decoration-none" href="https://github.com/itsmechelly/SingletonEvolution_10TypesOf_FromEagerlyToBestPractice/tree/main/src/n02_LazilySingleton" target="_blank">
+                    <h2 class="h4 fw-bolder">Lazily Singleton But Not a Thread Safe</h2>
+                    <p>Compared to the first example, instead of generating a "new object" in the field, we will
+                        initialize the field value to null.
+                        <br /> <i class="bi bi-arrow-right"></i> This way, "new object" will be created only by demand.
+                        <br /> <i class="bi bi-arrow-right"></i> The instance will be created within the "getter" method
+                        only once, at the first time an external entity outside of this specific class requires it.
+                    </p>
+                    <a class="text-decoration-none"
+                        href="https://github.com/itsmechelly/SingletonEvolution_10TypesOf_FromEagerlyToBestPractice/tree/main/src/n02_LazilySingleton"
+                        target="_blank">
                         View source code on github
                         <i class="bi bi-arrow-right"></i>
                     </a>
@@ -94,10 +108,12 @@
                 <div class="col-lg-4">
                     <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i
                             class="bi bi-arrow-down-circle-fill"></i></div>
-                    <h2 class="h4 fw-bolder">Thread Safe But Not Efficient</h2>
+                    <h2 class="h4 fw-bolder">Lazily, Thread Safe But Not Efficient</h2>
                     <p>Text will appear here Text will appear here Text will appear here Text will appear here Text will
                         appear here Text will appear here Text will appear here Text will appear here</p>
-                    <a class="text-decoration-none" href="https://github.com/itsmechelly/SingletonEvolution_10TypesOf_FromEagerlyToBestPractice/tree/main/src/n03_ThreadSafeButNotEfficient" target="_blank">
+                    <a class="text-decoration-none"
+                        href="https://github.com/itsmechelly/SingletonEvolution_10TypesOf_FromEagerlyToBestPractice/tree/main/src/n03_ThreadSafeButNotEfficient"
+                        target="_blank">
                         View source code on github
                         <i class="bi bi-arrow-right"></i>
                     </a>
@@ -109,10 +125,13 @@
                 <div class="col-lg-4 mb-5 mb-lg-0">
                     <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i
                             class="bi bi-arrow-down-circle-fill"></i></div>
-                    <h2 class="h4 fw-bolder">More Efficient, BUT Not Thread Safe <i class="bi bi-arrow-right"></i> The Double Lock Problem</h2>
+                    <h2 class="h4 fw-bolder">More Efficient, BUT Not Thread Safe <i class="bi bi-arrow-right"></i> The
+                        Double Lock Problem</h2>
                     <p>Text will appear here Text will appear here Text will appear here Text will appear here Text will
                         appear here Text will appear here Text will appear here Text will appear here</p>
-                    <a class="text-decoration-none" href="https://github.com/itsmechelly/SingletonEvolution_10TypesOf_FromEagerlyToBestPractice/tree/main/src/n04_MoreEfficient_ButNotThreadSafe_TheDoubleLockProblem" target="_blank">
+                    <a class="text-decoration-none"
+                        href="https://github.com/itsmechelly/SingletonEvolution_10TypesOf_FromEagerlyToBestPractice/tree/main/src/n04_MoreEfficient_ButNotThreadSafe_TheDoubleLockProblem"
+                        target="_blank">
                         View source code on github
                         <i class="bi bi-arrow-right"></i>
                     </a>
@@ -121,10 +140,12 @@
                     <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i
                             class="bi bi-arrow-down-circle-fill"></i>
                     </div>
-                    <h2 class="h4 fw-bolder">Thread Safe With Double Lock Solve</h2>
+                    <h2 class="h4 fw-bolder">Lazily Thread Safe With Double Lock Solve</h2>
                     <p>Text will appear here Text will appear here Text will appear here Text will appear here Text will
                         appear here Text will appear here Text will appear here Text will appear here</p>
-                    <a class="text-decoration-none" href="#https://github.com/itsmechelly/SingletonEvolution_10TypesOf_FromEagerlyToBestPractice/tree/main/src/n05_ThreadSafeWithDoubleLockSolve" target="_blank">
+                    <a class="text-decoration-none"
+                        href="https://github.com/itsmechelly/SingletonEvolution_10TypesOf_FromEagerlyToBestPractice/tree/main/src/n05_ThreadSafeWithDoubleLockSolve"
+                        target="_blank">
                         View source code on github
                         <i class="bi bi-arrow-right"></i>
                     </a>
@@ -135,7 +156,9 @@
                     <h2 class="h4 fw-bolder">Thread Safe With Double Lock Solve And Volatile</h2>
                     <p>Text will appear here Text will appear here Text will appear here Text will appear here Text will
                         appear here Text will appear here Text will appear here Text will appear here</p>
-                    <a class="text-decoration-none" href="https://github.com/itsmechelly/SingletonEvolution_10TypesOf_FromEagerlyToBestPractice/tree/main/src/n06_ThreadSafeWithDoubleLockSolveAndVolatile" target="_blank">
+                    <a class="text-decoration-none"
+                        href="https://github.com/itsmechelly/SingletonEvolution_10TypesOf_FromEagerlyToBestPractice/tree/main/src/n06_ThreadSafeWithDoubleLockSolveAndVolatile"
+                        target="_blank">
                         View source code on github
                         <i class="bi bi-arrow-right"></i>
                     </a>
@@ -150,7 +173,9 @@
                     <h2 class="h4 fw-bolder">Ultimate Efficient, Thread Safe, With Final attribute, Immutable</h2>
                     <p>Text will appear here Text will appear here Text will appear here Text will appear here Text will
                         appear here Text will appear here Text will appear here Text will appear here</p>
-                    <a class="text-decoration-none" href="https://github.com/itsmechelly/SingletonEvolution_10TypesOf_FromEagerlyToBestPractice/blob/main/src/n07_UltimateEfficient_WithFinalAttribute_Immutable/MySingleton.java" target="_blank">
+                    <a class="text-decoration-none"
+                        href="https://github.com/itsmechelly/SingletonEvolution_10TypesOf_FromEagerlyToBestPractice/blob/main/src/n07_UltimateEfficient_WithFinalAttribute_Immutable/MySingleton.java"
+                        target="_blank">
                         View source code on github
                         <i class="bi bi-arrow-right"></i>
                     </a>
@@ -162,7 +187,9 @@
                     <h2 class="h4 fw-bolder">Nice Eagerly And Thread Safe With Holder Design Pattern</h2>
                     <p>Text will appear here Text will appear here Text will appear here Text will appear here Text will
                         appear here Text will appear here Text will appear here Text will appear here</p>
-                    <a class="text-decoration-none" href="https://github.com/itsmechelly/SingletonEvolution_10TypesOf_FromEagerlyToBestPractice/blob/main/src/n08_NiceEagerlyAndThreadSafeWithHolderDesignPattern/MySingleton.java" target="_blank">
+                    <a class="text-decoration-none"
+                        href="https://github.com/itsmechelly/SingletonEvolution_10TypesOf_FromEagerlyToBestPractice/blob/main/src/n08_NiceEagerlyAndThreadSafeWithHolderDesignPattern/MySingleton.java"
+                        target="_blank">
                         View source code on github
                         <i class="bi bi-arrow-right"></i>
                     </a>
@@ -173,7 +200,9 @@
                     <h2 class="h4 fw-bolder">Singleton Enum</h2>
                     <p>Text will appear here Text will appear here Text will appear here Text will appear here Text will
                         appear here Text will appear here Text will appear here Text will appear here</p>
-                    <a class="text-decoration-none" href="https://github.com/itsmechelly/SingletonEvolution_10TypesOf_FromEagerlyToBestPractice/tree/main/src/n09_OldEnumRemainder" target="_blank">
+                    <a class="text-decoration-none"
+                        href="https://github.com/itsmechelly/SingletonEvolution_10TypesOf_FromEagerlyToBestPractice/tree/main/src/n09_OldEnumRemainder"
+                        target="_blank">
                         View source code on github
                         <i class="bi bi-arrow-right"></i>
                     </a>
@@ -188,7 +217,9 @@
                     <h2 class="h4 fw-bolder">Old Enum Remainder</h2>
                     <p>Text will appear here Text will appear here Text will appear here Text will appear here Text will
                         appear here Text will appear here Text will appear here Text will appear here</p>
-                    <a class="text-decoration-none" href="https://github.com/itsmechelly/SingletonEvolution_10TypesOf_FromEagerlyToBestPractice/tree/main/src/n10_SingletonEnum" target="_blank">
+                    <a class="text-decoration-none"
+                        href="https://github.com/itsmechelly/SingletonEvolution_10TypesOf_FromEagerlyToBestPractice/tree/main/src/n10_SingletonEnum"
+                        target="_blank">
                         View source code on github
                         <i class="bi bi-arrow-right"></i>
                     </a>

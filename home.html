@@ -70,8 +70,7 @@
         <div class="container px-5 my-5">
             <div class="row gx-5">
                 <div class="col-lg-4 mb-5 mb-lg-0">
-                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i
-                            class="bi bi-1-circle-fill"></i>
+                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-1-circle"></i>
                     </div>
                     <h2 class="h4 fw-bolder">Lazy Singleton, <br />Not a Thread Safe</h2>
                     <p>Compared to Eager Singleton, instead of generating a "new object" in the field, we will
@@ -89,7 +88,7 @@
                 </div>
                 <div class="col-lg-4 mb-5 mb-lg-0">
                     <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i
-                            class="bi bi-2-circle-fill"></i></div>
+                            class="bi bi-2-circle"></i></div>
                     <h2 class="h4 fw-bolder">Lazy Singleton, <br />Thread Safe But Not Efficient</h2>
                     <p>In order to avoid situations when multiple threads in a single program try to access the same
                         resource at the same time we can use synchronized static method.
@@ -106,7 +105,7 @@
                 </div>
                 <div class="col-lg-4 mb-5 mb-lg-0">
                     <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i
-                            class="bi bi-3-circle-fill"></i></i></div>
+                            class="bi bi-3-circle"></i></i></div>
                     <h2 class="h4 fw-bolder">More Efficient, BUT Not Thread Safe <i class="bi bi-arrow-right"></i>
                         The
                         Double Lock Problem</h2>
@@ -130,7 +129,7 @@
             <div class="row gx-5">
                 <div class="col-lg-4 mb-5 mb-lg-0">
                     <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i
-                            class="bi bi-4-circle-fill"></i></div>
+                            class="bi bi-4-circle"></i></div>
                     <h2 class="h4 fw-bolder">Lazy Singleton, <br />Thread Safe With Double Lock Solve</h2>
                     <p>To solve the double lock problem we encountered in the previous implementation, and to ensure our
                         Singleton is a thread safe, we will perform another check to make sure the instance is null -
@@ -147,7 +146,7 @@
                 </div>
                 <div class="col-lg-4 mb-5 mb-lg-0">
                     <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i
-                            class="bi bi-5-circle-fill"></i></div>
+                            class="bi bi-5-circle"></i></div>
                     <h2 class="h4 fw-bolder">Thread Safe With Double Lock Solve And Volatile</h2>
                     <p>Another way to implement Multithreaded Singleton, is by using Volatile modifier that provides a
                         way to control memory order.
@@ -167,7 +166,7 @@
                 </div>
                 <div class="col-lg-4 mb-5 mb-lg-0">
                     <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i
-                            class="bi bi-6-circle-fill"></i></div>
+                            class="bi bi-6-circle"></i></div>
                     <h2 class="h4 fw-bolder">Eager Singleton, Ultimate Efficient, Thread Safe, with Final Attribute,
                         Immutable</h2>
                     <p>The fact that the field is "static" and initialized as a "new object" means that he will be
@@ -190,7 +189,7 @@
             <div class="row gx-5">
                 <div class="col-lg-4 mb-5 mb-lg-0">
                     <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i
-                            class="bi bi-7-circle-fill"></i></div>
+                            class="bi bi-7-circle"></i></div>
                     <h2 class="h4 fw-bolder">Nice Eager And Thread Safe With Holder Design Pattern</h2>
                     <p>The holder will "return" the field that has been already assigned and initialized.
                     </p>
@@ -203,7 +202,7 @@
                 </div>
                 <div class="col-lg-4 mb-5 mb-lg-0">
                     <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i
-                            class="bi bi-8-circle-fill"></i></div>
+                            class="bi bi-8-circle"></i></div>
                     <h2 class="h4 fw-bolder">Singleton Enum</h2>
                     <p>Since enums are inherently serializable, therefore, it is 100% guaranteed that only one instance
                         of the Singleton is present within a JVM.</p>
@@ -216,7 +215,7 @@
                 </div>
                 <div class="col-lg-4 mb-5 mb-lg-0">
                     <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i
-                            class="bi bi-9-circle-fill"></i></div>
+                            class="bi bi-9-circle"></i></div>
                     <h2 class="h4 fw-bolder">Singleton By Default <i class="bi bi-emoji-wink"></i> <br /> Spring
                         Framework</h2>
                     <p>Just use Spring Framework project, by default, all Spring beans are Singletons.</p>

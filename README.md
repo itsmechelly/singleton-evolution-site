@@ -10,7 +10,7 @@ To view the source code of the project 👉🏻 [please click here](https://gith
 ## 🤔 What is the purpose of this application?
 
 Singleton is a Creational Design Pattern that lets you ensure that a class has only one instance, while providing a global access point to this instance.
-<br/>
+<br/><br/>
 There are several ways to implement a Singleton, whether it's eager or lazy... 
 <br/>
 I thought it would be nice to create a project that unifies all these implementations.

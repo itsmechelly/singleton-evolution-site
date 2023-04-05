@@ -12,7 +12,7 @@ To view the source code of the project 👉🏻 [please click here](https://gith
 Singleton is a Creational Design Pattern that lets you ensure that a class has only one instance, while providing a global access point to this instance.
 <br/><br/>
 There are several ways to implement a Singleton, whether it's eager or lazy... 
-<br/>
+<br/><br/>
 I thought it would be nice to create a project that unifies all these implementations.
 
 This project contains a design mostly done by Bootstrap 5, does not contain server side but includes links to my github profile where there are 9 different implementations of Singleton Design Pattern written by Java language.

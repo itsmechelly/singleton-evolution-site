@@ -22,7 +22,7 @@ I have created 9 implementations for Singleton Pattern.
 <br/>
 Each implementation has it’s own GitHub link.
 
-# For Extra Details 👉🏻 Please view the [Source Code]((https://github.com/itsmechelly/SingletonEvolution_10TypesOf_FromEagerlyToBestPractice))
+# For Extra Details 👉🏻 Please view the Source Code
 
 <br/>
 Thanks for reading,

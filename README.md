@@ -4,8 +4,8 @@ This repo contain the ui web page I created for the SingletonEvolution_10TypesOf
 <br/>
 it's only a preview for the project.<br/>
 
-To view the preview page 👉🏻 [please click here](http://singleton-evolution.s3-website-eu-west-1.amazonaws.com/).<br/><br/>
-To view the source code of the project 👉🏻 [please click here](https://github.com/itsmechelly/SingletonEvolution_10TypesOf_FromEagerlyToBestPractice).<br/>
+To view the preview page 👉🏻 [please CLICK HERE](http://singleton-evolution.s3-website-eu-west-1.amazonaws.com/).<br/><br/>
+To view the source code of the project 👉🏻 [please CLICK HERE](https://github.com/itsmechelly/SingletonEvolution_10TypesOf_FromEagerlyToBestPractice).<br/>
 
 ## 🤔 What is the purpose of this application?
 
